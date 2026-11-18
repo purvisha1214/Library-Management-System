@@ -1,29 +1,35 @@
-# Library Management System
 
-A Python and MySQL-based Library Management System that helps manage books, members, and book transactions through a simple menu-driven interface.
+# 📚 Library Management System
 
-## Features
+A Python-based Library Management System built using Streamlit and MySQL. It helps manage books, members, book issuing, returns, and transaction records through a web interface.
 
-- Add new books
-- View all available books
-- Register library members
+## 🚀 Features
+
+- Dashboard with library statistics
+- Add and view books
+- Search books by title or author
+- Register and view members
 - Issue books to members
 - Return issued books
-- View complete transaction history
-- Automatically update available book copies
-- Store records in a MySQL database
+- View transaction history
+- Filter transactions by status
+- Low-stock book alerts
+- Recent transaction overview
+- Export books, members, and transactions as CSV files
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
+- Streamlit
 - MySQL
+- Pandas
 - MySQL Connector/Python
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 LibraryManagementSystem/
-│
+├── app.py
 ├── main.py
 ├── database.py
 ├── config.py
@@ -33,13 +39,13 @@ LibraryManagementSystem/
 └── .gitignore
 ```
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd LibraryManagementSystem
+git clone https://github.com/purvisha1214/Library-Management-System.git
+cd Library-Management-System
 ```
 
 ### 2. Install dependencies
@@ -48,31 +54,29 @@ cd LibraryManagementSystem
 pip install -r requirements.txt
 ```
 
-### 3. Create the database
+### 3. Set up MySQL
 
-Open MySQL Workbench and execute the SQL commands from `schema.sql`.
+- Open MySQL Workbench.
+- Execute the SQL commands in `schema.sql`.
+- Create a local `config.py` file with your own MySQL credentials.
+- Do not upload your actual database password to GitHub.
 
-### 4. Configure database connection
-
-Create a local `config.py` file and add your own MySQL credentials:
-
-```python
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "YOUR_MYSQL_PASSWORD",
-    "database": "library_db"
-}
-```
-
-Do not upload your actual database password to GitHub.
-
-### 5. Run the project
+### 4. Run the application
 
 ```bash
-python main.py
+streamlit run app.py
 ```
 
-## Author
+The application will open in your browser.
 
-Developed as a Python and MySQL academic project.
+## 🔐 Security
+
+- Database credentials are stored locally in `config.py`.
+- Sensitive configuration files are excluded using `.gitignore`.
+- Database operations use parameterized SQL queries.
+
+## 👩‍💻 Author
+
+**Purvisha Gohel**
+
+BCA Student | Aspiring Software Developer
