@@ -3,7 +3,7 @@
 
 A Python-based Library Management System built using Streamlit and MySQL. It helps manage books, members, book issuing, returns, and transaction records through a web interface.
 
-## Features
+## 🚀 Features
 
 - Dashboard with library statistics
 - Add and view books
@@ -17,7 +17,7 @@ A Python-based Library Management System built using Streamlit and MySQL. It hel
 - Recent transaction overview
 - Export books, members, and transactions as CSV files
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Streamlit
@@ -25,7 +25,7 @@ A Python-based Library Management System built using Streamlit and MySQL. It hel
 - Pandas
 - MySQL Connector/Python
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 LibraryManagementSystem/
@@ -39,7 +39,7 @@ LibraryManagementSystem/
 └── .gitignore
 ```
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
 ### 1. Clone the repository
 
@@ -69,13 +69,13 @@ streamlit run app.py
 
 The application will open in your browser.
 
-## Security
+## 🔐 Security
 
 - Database credentials are stored locally in `config.py`.
 - Sensitive configuration files are excluded using `.gitignore`.
 - Database operations use parameterized SQL queries.
 
-## Author
+## 👩‍💻 Author
 
 **Purvisha Gohel**
 
