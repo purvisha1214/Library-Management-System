@@ -1,6 +1,11 @@
 
+import streamlit as st
 import mysql.connector
-from config import DB_CONFIG
+
+try:
+    from config import DB_CONFIG
+except ImportError:
+    DB_CONFIG = dict(st.secrets["mysql"])
 
 
 def get_connection():
@@ -8,7 +13,7 @@ def get_connection():
         connection = mysql.connector.connect(**DB_CONFIG)
 
         if connection.is_connected():
-            print("MySQL Connected Successfully!")
+            print("Database Connected Successfully!")
             return connection
 
     except mysql.connector.Error as error:
