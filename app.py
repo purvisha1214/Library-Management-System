@@ -90,6 +90,17 @@ st.markdown("""
     border: none;
     padding: 8px 18px;
 }
+/* Success message styling */
+div[data-testid="stAlert"][kind="success"] {
+    background-color: #d1fae5 !important;
+    border: 1px solid #6ee7b7 !important;
+}
+
+div[data-testid="stAlert"][kind="success"] p,
+div[data-testid="stAlert"][kind="success"] svg {
+    color: #065f46 !important;
+    fill: #065f46 !important;
+}
 
 .stButton > button:hover,
 .stFormSubmitButton > button:hover {
@@ -129,6 +140,7 @@ if page == "Dashboard":
     st.subheader("Dashboard Overview")
 
     connection = get_connection()
+    
 
     if connection:
         cursor = connection.cursor()
